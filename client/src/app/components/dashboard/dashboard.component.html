@@ -1,0 +1,74 @@
+<section>
+
+    <!--Navbar-->
+    <div>
+        <nav class="navbar navbar-dark bg-dark">
+
+            <!--Navigation-->
+            <div>
+                <ul class="nav-links">
+                    <li><a routerLink="/About">About</a></li>
+                    <li><a routerLink="/Projects">Projects</a></li>
+                    <li><a routerLink="/AllLogs">Logs</a></li>
+                    <li><a routerLink="/AllUsers" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Users</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!--profile-->
+            <div class="user-profile-container">
+                <img src="../../../assets/icons8-male-user-96.png" alt="profile" class="profile-pic">
+                <h3>Welcome {{username}}</h3>
+            </div>
+
+            <!--Profile Data-->
+            <!--<div
+                style="border:1px solid rgb(223, 223, 223); background-color: white; height: 100px; width: 200px; position: absolute; top: 45px; right: 2px; padding: 10px 30px;">
+                <a routerLink="/Profile">Profile</a>
+                <a>Logout </a>
+            </div>-->
+
+        </nav>
+    </div>
+
+
+    <div style="display: grid; grid-template-columns: 15% 85%;">
+        <!--Sidebar-->
+
+        <!-- <div class="Dashboard-left-container"> -->
+        <div class="sidebar-menu bg-dark">
+            <div class="project-heading">
+                <h3>Projects</h3>
+                <hr>
+            </div>
+
+            <!--Projects Container-->
+            <div class="project-container" style="color:white;">
+
+                <div>
+                    <h4>Project1</h4>
+                </div>
+
+                <div>
+                    <h4>Project2</h4>
+                </div>
+
+                <div>
+                    <h4>Project3</h4>
+                </div>
+
+                <div>
+                    <h4>Project4</h4>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+
+
+        <!--Content-->
+        <div class="Dashboard-right-container"
+            style="border:2px solid black; padding: 40px; height: 90vh; overflow: auto;">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</section>

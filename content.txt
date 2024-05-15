@@ -1,0 +1,79 @@
+Angular VS Angular.js
+npm install -g @angular/cli@10.0.0
+Installation: ng new projectname -> npm start/ng serve
+use 2 angular versions using nvm
+Files and Folder Structure
+Interpolation
+CLI commands
+Components
+Inline Styles and Templates in Components
+Module
+Define and Call function
+Events
+NG=>Next Generation/Angular
+Get TextBox Value and Print
+Component Styles (Internal > Component > Global)
+Property Binding
+Property Binding vs Interpolation
+If-Else Condition (Import CommonModule to use *ngIf)
+Else-If Condition
+Switch Case
+For Loop
+Nested Loop
+Style Binding
+Form (Import FormsModule to use *ngForm)
+Bootstrap in Angular
+MaterialUI in Angular
+
+
+Passing Data from Parent to Child Component (Props, flow: define ndata (app component) -> passing ndata to datapassing component (using props/property binding) -> importing input in datapassing component (Import {Input,OnInit} from @angular/core) -> displaying ndata ({{item}}))
+
+Reusable Component
+
+Passing Data from Child to Parent Component (Props, flow:Define function in app.ts file -> passing data to child component -> importing Output in child component (Import {OnInit,Output,EventEmitter} from @angular/core) -> Emitting the data from the child component to the parent using emit method (updateDataEvent.emit))
+
+Two Way Binding (import FormsModule) (Update and Display a property at the same time)
+Template Reference Variable
+TS Basics (number,string,boolean,any)
+Pipes
+Custom Pipes (command: ng g p pipe/name)
+
+
+Forms (Template Driven Form,Template Driven Form Validations, Reactive Form,Reactive Form Validations)
+Directives
+
+StaticRouting/Routing ( Importing RouterLink/RouterOutlet in app.component.ts  -> Define Routes in app.routes.ts -> Use Routes in app.component.html using a tag and routerLink attribute)
+
+Dynamic Routing
+404 Page(using '**' in path)
+Child Routes (Creating Sections/components inside a particular page/parentcomponent)
+
+Services
+
+
+
+
+
+
+
+
+
+Topics:-
+
+TypeScript Basics
+RxJS Basics
+Angular CLI (ng commands)
+Angular.js vs Angular
+Templates (Interpolation,Property Binding,Binding,Reference Vars, @input/@output)
+
+Rendering (Directives,Pipes,Change Detection, custome directives/pipes)
+Forms (Template-driven Form, Reactive Form)
+Routing (Router Outlets, Router Links, Router Events, Guards, Configuration, Lazy Loading)
+Services and Remote Data
+Hooks and States
+Zones
+Server Side Rendering (SSR) 
+Static Site Generation (SSG)
+
+
+

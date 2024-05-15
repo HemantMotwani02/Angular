@@ -1,0 +1,65 @@
+<div class="row">
+    <h2>Users</h2>
+</div>
+
+
+
+<div>
+    <div class="row">
+
+        <!--Search Bar-->
+        <div class="col-10">
+            <div class="input-group mb-3 ">
+                <input type="search" class="form-control" placeholder="Search User" aria-label="Search Users"
+                    aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-info" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-2"><button type="button" class="btn btn-primary">Add
+                User</button>
+        </div>
+    </div>
+
+
+
+
+    <div class="col-11">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Select</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let user of users">
+                
+                <tr>
+                    <th scope="row">{{user.user_id}}</th>
+
+                    <td><img src="../../../assets/icons8-male-user-96.png"
+                            style="height: 25px; width: 25px; margin: 0 10px;">{{user.name}}</td>
+                    <td>{{user.email}}</td>
+
+                    <ng-template [ngIf]="user.role===2">
+                        <td>Manager</td>
+                    </ng-template>
+                    <ng-template [ngIf]="user.role===3">
+                        <td>Employee</td>
+                    </ng-template>
+
+
+                    <td><input class="form-check-input" type="checkbox" [value]="user.user_id" id="flexCheckDefault" (click)="handleUserSelection(user.user_id)"></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <button class="btn btn-danger" (click)="deleteUser()">Delete Users</button>
+</div>

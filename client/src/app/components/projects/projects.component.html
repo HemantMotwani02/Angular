@@ -1,0 +1,91 @@
+<div class="row">
+    <h2>Projects</h2>
+</div>
+
+
+
+<div>
+    <div class="row">
+
+        <!--Search Bar-->
+        <div class="col-10">
+            <div class="input-group mb-3 ">
+                <input type="search" class="form-control" placeholder="Search Projects" aria-label="Search Projects"
+                    aria-describedby="basic-addon2" [(ngModel)]="SearchProjectName">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-info" type="button" (click)="SearchProject()">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-2"><button type="button" class="btn btn-primary" (click)="showForm=!showForm">Add
+                Project</button>
+        </div>
+
+        <!--filter-->
+        <div class="col-2">
+            <div ngbDropdown class="d-inline-block">
+                <button type="button" class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>
+                    Filter
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button ngbDropdownItem (click)="FilterProject('pending')">Pending</button>
+                    <button ngbDropdownItem (click)="FilterProject('completed')">Completed</button>
+                </div>
+            </div>
+        </div>
+
+        <!--sort-->
+        <div class="col-2">
+            <div ngbDropdown class="d-inline-block">
+                <button type="button" class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>
+                    Sort
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button ngbDropdownItem (click)="SortProject('casc')">Old - New Date</button>
+                    <button ngbDropdownItem (click)="SortProject('cdesc')">New - Old Date</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Project Display-->
+<div *ngFor="let project of projects">
+
+    <!--project-->
+    <div class="card my-5">
+        <div class="card-header">
+            {{project.project_name}}
+        </div>
+
+        <div class="card-body">
+            <!--Project Description-->
+            <p class="card-text">{{project.project_details}}</p>
+            <div class="badge bg-success">{{project.status}}</div>
+            <p>Managed by: {{project.userinfo.name}}</p>
+            <div>
+                Team Members:
+                <ul>
+                    <li>Member 1</li>
+                    <li>Member 2</li>
+                    <li>Member 3</li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="col-8"><a href="">More Details</a></div>
+                <div class="col-2">
+                    <p>{{project.created_at.split('T')}}</p>
+                </div>
+                <div class="col-2">
+                    <p>created by</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<app-add-project *ngIf="showForm"></app-add-project>

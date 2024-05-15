@@ -1,0 +1,36 @@
+<form
+    style="background-color: white; width: 40vw; padding: 30px; border:1px solid rgb(204, 204, 204); position: absolute; z-index: 20; top:30%; left: 30%;"
+    [formGroup]="newProject" (ngSubmit)="CreateProject()">
+    <h2>Add Project</h2>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-12">
+            <label for="inputEmail4">Project Name</label>
+            <input type="text" class="form-control" id="inputEmail4" placeholder="Enter Project Name"
+                formControlName="project_name" required>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label for="inputPassword4">Project Description</label>
+            <div class="input-group">
+                <textarea class="form-control" aria-label="With textarea" placeholder="Enter Project Details"
+                    formControlName="project_details"></textarea>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputState">Select Manager</label>
+            <select id="inputState" class="form-control" formControlName="manager_id" placeholder="Select Manager">
+                <option [value]="null" disabled selected>Select Manager</option>
+                <option *ngFor="let names of Managers" [value]="names.user_id">{{names.name}}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Confirm</button>
+</form>

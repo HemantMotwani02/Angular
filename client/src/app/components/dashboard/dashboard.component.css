@@ -1,0 +1,56 @@
+.navbar {
+  padding: 30px 15px;
+}
+.nav-links {
+  color: white;
+  font-size: 18px;
+  list-style: none;
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+.nav-links a:focus {
+  /* color: rgb(65, 96, 235); */
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: rgb(65, 96, 235);
+}
+
+.nav-links > li:hover {
+  color: rgb(65, 96, 235);
+}
+
+.user-profile-container {
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 20px;
+}
+
+.user-profile-container h3 {
+  margin: auto;
+  font-size: 24px;
+}
+
+.profile-pic {
+  height: 35px;
+  width: 35px;
+}
+
+.sidebar-menu {
+  color: white;
+  border: 1px solid white;
+  height: 90vh;
+  min-width: 150px;
+  /* max-width: 15%; */
+  /* text-align: center; */
+  padding: 10px 0 0 20px;
+}
